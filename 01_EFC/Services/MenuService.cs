@@ -1,5 +1,11 @@
 ﻿using _01_EFC.Models;
-
+        // FÖR MIN UPPGIFT HAR JAG ANVÄND KOD SOM VAR SKAPAT AV LÄRARE 
+        // HANS MATTIN-LASSEI I LEKTIONEN-5 OCH ANPASSEDE DET TILL UPPGIFTENS KRAV
+        //
+        // kommentar till ärene/felanmälan ska skrivas i samma rutan vid uppdatering
+        // av ärende, tidpunkt ska skrivas i format ÅÅÅÅMMGG TT:MM,
+        // status ska skrivas i förm: NY/PÅ/AV
+        // 
 namespace _01_EFC.Services
 {
     internal class MenuService
@@ -23,10 +29,10 @@ namespace _01_EFC.Services
             Console.Write("Beskrivning av ärende/felanmälan: ");
             customer.StreetName = Console.ReadLine() ?? "";
 
-            Console.Write("Status: ");
+            Console.Write("Status: ny ");
             customer.PostalCode = Console.ReadLine() ?? "";
 
-            Console.Write("Tid punkt: ÅÅÅÅMMDD TT:MM ");
+            Console.Write("Tid punkt: ÅÅÅÅMMDD TT:MM  ");
             customer.City = Console.ReadLine() ?? "";
 
 
@@ -77,7 +83,7 @@ namespace _01_EFC.Services
                     Console.WriteLine($"Namn: {customer.FirstName} {customer.LastName}");
                     Console.WriteLine($"E-postadress: {customer.Email}");
                     Console.WriteLine($"Telefonnummer: {customer.PhoneNumber}");
-                    Console.WriteLine($"Beskrivning: {customer.StreetName}, Status: {customer.PostalCode}, Tidpunkt{customer.City}");
+                    Console.WriteLine($"Beskrivning: {customer.StreetName}, Status: {customer.PostalCode}, Tidpunkt {customer.City}");
                     Console.WriteLine("");
                 }
                 else
@@ -120,13 +126,13 @@ namespace _01_EFC.Services
                     Console.Write("Telefonnummer: ");
                     customer.PhoneNumber = Console.ReadLine() ?? null!;
 
-                    Console.Write("Beskrivning: ");
+                    Console.Write("Beskrivning/kommentar: ");
                     customer.StreetName = Console.ReadLine() ?? null!;
 
-                    Console.Write("Status: ");
+                    Console.Write("Status: på/av  ");
                     customer.PostalCode = Console.ReadLine() ?? null!;
 
-                    Console.Write("Tidpunkt: ");
+                    Console.Write("Tidpunkt: ÅÅÅÅMMDD TT:MM  ");
                     customer.City = Console.ReadLine() ?? null!;
 
                     //update specific customer from database
